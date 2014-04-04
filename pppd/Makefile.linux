@@ -61,7 +61,7 @@ HAVE_MULTILINK=y
 USE_TDB=y
 
 HAS_SHADOW=y
-#USE_PAM=y
+USE_PAM=y
 HAVE_INET6=y
 
 # Enable plugins
