@@ -8,6 +8,7 @@ DESTDIR = $(INSTROOT)@DESTDIR@
 BINDIR = $(DESTDIR)/sbin
 MANDIR = $(DESTDIR)/share/man/man8
 INCDIR = $(DESTDIR)/include
+LIBDIR = $(DESTDIR)/lib/$(shell gcc -print-multi-os-directory 2> /dev/null)
 
 TARGETS = pppd
 
@@ -32,7 +33,7 @@ endif
 
 CC = gcc
 #
-COPTS = -Wall $(RPM_OPT_FLAGS)
+COPTS = -Wall $(RPM_OPT_FLAGS) -DLIBDIR=\""$(LIBDIR)"\"
 
 # Uncomment the next 2 lines to include support for Microsoft's
 # MS-CHAP authentication protocol.  Also, edit plugins/radius/Makefile.linux.
