@@ -2,7 +2,7 @@
 # $Id: configure,v 1.38 2008/06/15 07:08:49 paulus Exp $
 
 # Where to install stuff by default
-DESTDIR=/usr/local
+DESTDIR=/usr
 SYSCONF=/etc
 
 #  if [ -d /NextApps ]; then

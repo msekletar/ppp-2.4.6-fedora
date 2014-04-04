@@ -26,7 +26,7 @@ PPPD_RHOST=myremotehost
 # For this example, we assume that pppd on both local and remote
 # machines reside in the same place, /usr/local/bin/pppd
 #
-PPPD_LOC=/usr/local/bin/pppd
+PPPD_LOC=/usr/sbin/pppd
 
 #
 # The location of local options file (where ssh client is running).
@@ -52,7 +52,7 @@ PPPD_REM_OPT=/etc/ppp/options-ssh-rem
 #
 # The location of ssh client on the local machine
 #
-SSH_LOC=/usr/local/bin/ssh
+SSH_LOC=/usr/bin/ssh
 
 export PPPD_LOC PPPD_LOC_OPT PPPD_REM_OPT PPPD_RHOST SSH_LOC
 

@@ -99,8 +99,8 @@ endif
 
 # EAP SRP-SHA1
 ifdef USE_SRP
-CFLAGS	+= -DUSE_SRP -DOPENSSL -I/usr/local/ssl/include
-LIBS	+= -lsrp -L/usr/local/ssl/lib -lcrypto
+CFLAGS	+= -DUSE_SRP -DOPENSSL -I/usr/include/openssl
+LIBS	+= -lsrp -L/usr/lib -lcrypto
 TARGETS	+= srp-entry
 EXTRAINSTALL = $(INSTALL) -c -m 555 srp-entry $(BINDIR)/srp-entry
 MANPAGES += srp-entry.8
