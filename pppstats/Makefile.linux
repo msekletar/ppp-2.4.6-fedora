@@ -10,7 +10,7 @@ PPPSTATSRCS = pppstats.c
 PPPSTATOBJS = pppstats.o
 
 #CC = gcc
-COPTS = -O
+COPTS = $(RPM_OPT_FLAGS)
 COMPILE_FLAGS = -I../include
 LIBS =
 

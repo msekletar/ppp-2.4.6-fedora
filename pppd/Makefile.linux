@@ -32,8 +32,7 @@ endif
 
 CC = gcc
 #
-COPTS = -O2 -pipe -Wall -g
-LIBS =
+COPTS = -Wall $(RPM_OPT_FLAGS)
 
 # Uncomment the next 2 lines to include support for Microsoft's
 # MS-CHAP authentication protocol.  Also, edit plugins/radius/Makefile.linux.
