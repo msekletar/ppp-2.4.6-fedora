@@ -76,6 +76,9 @@ CBCP=y
 # Use libutil
 USE_LIBUTIL=y
 
+# Enable EAP-TLS authentication (requires libssl and libcrypto)
+USE_EAPTLS=y
+
 MAXOCTETS=y
 
 INCLUDE_DIRS= -I../include
@@ -113,6 +116,15 @@ else
 PPPDSRCS += sha1.c
 HEADERS += sha1.h
 PPPDOBJS += sha1.o
+endif
+
+# EAP-TLS
+ifdef USE_EAPTLS
+CFLAGS += -DUSE_EAPTLS=1 -I/usr/kerberos/include
+LIBS += -lssl -lcrypto
+PPPDSRC += eap-tls.c
+HEADERS += eap-tls.h
+PPPDOBJS += eap-tls.o
 endif
 
 ifdef HAS_SHADOW
