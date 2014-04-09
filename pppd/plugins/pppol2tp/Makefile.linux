@@ -1,5 +1,5 @@
 #CC	= gcc
-COPTS	= -O2 -g
+COPTS	= $(RPM_OPT_FLAGS)
 CFLAGS	= $(COPTS) -I. -I../.. -I../../../include -fPIC
 LDFLAGS	= -shared
 INSTALL	= install
