@@ -32,6 +32,9 @@ include .depend
 endif
 
 CC = gcc
+
+LIBS = -ludev
+
 #
 COPTS = -Wall $(RPM_OPT_FLAGS) -DLIBDIR=\""$(LIBDIR)"\"
 
