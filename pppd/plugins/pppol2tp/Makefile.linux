@@ -1,5 +1,5 @@
 #CC	= gcc
-COPTS	= $(RPM_OPT_FLAGS)
+COPTS	= $(RPM_OPT_FLAGS) -DHAVE_MULTILINK
 CFLAGS	= $(COPTS) -I. -I../.. -I../../../include -fPIC
 LDFLAGS	= -shared
 INSTALL	= install
