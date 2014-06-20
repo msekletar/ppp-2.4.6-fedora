@@ -36,6 +36,7 @@
  ** documentation and/or software.                                    **
  ***********************************************************************
  */
+#ifndef USE_EAPTLS
 
 #ifndef __MD5_INCLUDE__
 
@@ -63,3 +64,5 @@ void MD5_Final (unsigned char hash[], MD5_CTX *mdContext);
 
 #define __MD5_INCLUDE__
 #endif /* __MD5_INCLUDE__ */
+
+#endif /* USE_EAPTLS */
