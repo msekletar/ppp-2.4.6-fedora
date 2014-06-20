@@ -120,10 +120,6 @@ bool	dump_options;		/* print out option values */
 bool	dryrun;			/* print out option values and exit */
 char	*domain;		/* domain name set by domain option */
 int	child_wait = 5;		/* # seconds to wait for children at exit */
-#ifdef USE_EAPTLS
-bool	only_update_crl_server = 0;	/* update server crl and exit */
-bool	only_update_crl_client = 0;	/* update client crl and exit */
-#endif /* USE_EAPTLS */
 struct userenv *userenv_list;	/* user environment variables */
 
 #ifdef MAXOCTETS
@@ -342,12 +338,6 @@ option_t general_options[] = {
     { "mo-timeout", o_int, &maxoctets_timeout,
       "Check for traffic limit every N seconds", OPT_PRIO | OPT_LLIMIT | 1 },
 #endif
-#ifdef USE_EAPTLS
-    { "only-update-crl-server", o_bool, &only_update_crl_server,
-      "Update server CA CRLs and exit", 1 },
-    { "only-update-crl-client", o_bool, &only_update_crl_client,
-      "Update client CA CRLs and exit", 1 },
-#endif /* USE_EAPTLS */
 
     { NULL }
 };
